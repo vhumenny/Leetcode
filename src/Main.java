@@ -13,9 +13,8 @@ public class Main {
                 ip += "[" + address.charAt(i) + "]";
 
             } else ip += address.charAt(i);
-
         }
-
+        address = ip;
         System.out.println(address);
     }
 
