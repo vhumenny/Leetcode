@@ -1,20 +1,19 @@
-import java.lang.reflect.Array;
-
 public class Main {
     public static void main(String[] args) {
         int x = 434;
 
         System.out.println(isPalindrome(x));
 
-        String address = "123.123.123.123";
-        String ip = "";
-        for (int i = 0; i < address.length(); i++) {
-            if (address.charAt(i) == '.') {
-                ip += "[" + address.charAt(i) + "]";
 
-            } else ip += address.charAt(i);
+        String address = "123.123.123.123";
+        char [] array = address.toCharArray();
+        address="";
+        for (int i = 0; i < array.length; i++) {
+            if (array[i]=='.') {
+                address += "[" + array[i] + "]";
+
+            } else address += array[i];
         }
-        address = ip;
         System.out.println(address);
     }
 
