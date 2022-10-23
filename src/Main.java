@@ -7,28 +7,28 @@ public class Main {
         System.out.println(isPalindrome(x));
 
         String address = "123.123.123.123";
-        char[] ip = address.toCharArray();
-        address = "";
-        for (int i = 0; i < ip.length; i++) {
-            if (Array.getChar(ip, i) == '.') {
-                address += "["+Array.getChar(ip, i)+"]";
+        String ip = "";
+        for (int i = 0; i < address.length(); i++) {
+            if (address.charAt(i) == '.') {
+                ip += "[" + address.charAt(i) + "]";
 
-            }
-            else address += Array.getChar(ip, i);
+            } else ip += address.charAt(i);
 
         }
 
         System.out.println(address);
     }
+
     public static boolean isPalindrome(int x) {
 
-        String s = ""+x;
-        char [] array = s.toCharArray();
+        String s = "" + x;
+        char[] array = s.toCharArray();
 
         StringBuilder reversed = new StringBuilder();
-        for (int i = array.length-1; i>=0; i--) {
+        for (int i = array.length - 1; i >= 0; i--) {
             reversed.append(array[i]);
         }
 
         return Integer.valueOf(reversed.toString()).equals(x);
+    }
 }
