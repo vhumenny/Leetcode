@@ -7,7 +7,7 @@ public class Main {
         int maxWords = 0;
         for (int i = 0; i < sentences.length; i++) {
             int countWords = 0;
-            int a = 0;
+            int a;
             for (int j = 0; j < sentences[i].length(); j += a) {
                 a = 0;
                 if (sentences[i].indexOf(" ", j) > 0) {
